@@ -1,11 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 <body>
-    
+    <div id="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h2>Restaurants Tables Booking Facility</h2></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="https://www.agoda.com/en-in/search?selectedproperty=463240&city=17269&hid=463240&site_id=1841706&tag=5d61ab35-f483-896d-7122-5012a7295f0e&device=c&network=g&adid=454628322905&rand=1695065421749674389&expid=&adpos=&gclid=Cj0KCQjwz8emBhDrARIsANNJjS72cAKrScUElrtObUnAeSZjZ1j-HuA0gIf05LS1t253tie7glV6cqoaAgS4EALw_wcB&pslc=1">about</a></li>
+                        <li><a href="index1.html">reservation</a></li>
+                        <li><a href="index4.html">gallery</a></li>
+                        <li><a href="index3.html">contact</a></li>
+                        <li><a href="index5.html">reviews</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="gallery">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img
+                            src="https://img.freepik.com/free-photo/restaurant-hall-with-lots-table_140725-6309.jpg?size=626&ext=jpg&ga=GA1.2.301797753.1688363773&semt=ais"
+                            width="100%" height="520px"z-index="2" alt=""></div>
+                    <div class="swiper-slide"><img
+                            src="https://img.freepik.com/free-photo/sitting-table-with-chairs-yellow-sofa-restaurant-with-panoramic-view_114579-1523.jpg?size=626&ext=jpg&ga=GA1.2.301797753.1688363773&semt=ais"
+                            width="100%" height="520px" z-index="2"alt=""></div>
+                    <div class="swiper-slide"><img
+                            src="https://img.freepik.com/free-photo/restaurant-table-private-room-with-fireplace-wooden-ceilings-brick-walls_140725-8458.jpg?size=626&ext=jpg&ga=GA1.2.301797753.1688363773&semt=ais"
+                            width="100%" height="520px"z-index="2"alt=""></div>
+                    <div class="swiper-slide"><img
+                            src="https://img.freepik.com/premium-photo/elegant-table-setting-decorated-with-forget-me-flowers-candles-around-plates-wooden-background_195549-356.jpg?size=626&ext=jpg&ga=GA1.2.301797753.1688363773&semt=ais"
+                            width="100%" height="520px"z-index="2" alt=""></div>
+                    <div class="swiper-slide"><img
+                            src="https://img.freepik.com/premium-photo/captivating-image-elegant-beach-dining-experience-bathed-warm-hues-setting-sun-creating-perfect-atmosphere-love-relaxation_674594-8629.jpg?size=626&ext=jpg&ga=GA1.2.301797753.1688363773&semt=ais"
+                            width="100%" height="520px"z-index="2" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div id="bar">
+            <h2>Luxurious Dinning Decors</h2>
+            <button onclick="checkHotelAvailability()" class="first">Check Availability</button>
+        </div>
+        <div id="box">
+            <div id="box1">
+                <h3>Best Foods</h3><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pari<br>atur facere sequi
+                    necessitatibus,
+                    eligendi corporis autem ullam. Quo sapiente aut ducimus dolorum odio pariatur ad, minima impedit
+                    obcaecati cumque quae!</p><br>
+                <button class="second" onclick="reservation()">Make A Reservation</button>
+            </div>
+            <div id="box2">
+                <img src="https://img.freepik.com/premium-photo/assorted-indian-recipes-food-various_79295-7226.jpg?size=626&ext=jpg&ga=GA1.2.301797753.1688363773&semt=ais"
+                    width="380px" height="343px" id="cat1" alt="">
+            </div>
+        </div>
+        <div id="box">
+            <div id="box3">
+                <h3>Cooldrinks & Icecreams</h3><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pari<br>atur facere sequi
+                    necessitatibus,
+                    eligendi corporis autem ullam. Quo sapiente aut ducimus dolorum odio pariatur ad, minima impedit
+                    obcaecati cumque quae!</p><br>
+                <button class="second" onclick="contactInfo()">Contact Us</button>
+            </div>
+            <div id="box4">
+                <img src="https://img.freepik.com/premium-photo/delicious-colorful-ice-cream-bowl-explosion-flavor-ice-cream-different-varieties_158863-11056.jpg?size=626&ext=jpg&ga=GA1.2.301797753.1688363773&semt=ais"
+                    width="380px" height="343px" alt="">
+            </div>
+        </div>
+        <div id="box">
+            <div id="box1">
+                <h3>Soups & Salads</h3><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pari<br>atur facere sequi
+                    necessitatibus,
+                    eligendi corporis autem ullam. Quo sapiente aut ducimus dolorum odio pariatur ad, minima impedit
+                    obcaecati cumque quae!</p><br>
+                <button class="second" onclick="checkHotelAvailability()">Check Availability</button>
+            </div>
+            <div id="box2">
+                <img src="https://img.freepik.com/free-photo/flat-lay-dishes-with-soups-garlic_23-2148460127.jpg?size=626&ext=jpg&ga=GA1.2.301797753.1688363773&semt=ais"
+                    width="380px" height="343px" alt="">
+            </div>
+        </div>
+        <div id="box">
+            <div id="box3">
+                <h3>Pizzas & Burgers</h3><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pari<br>atur facere sequi
+                    necessitatibus,
+                    eligendi corporis autem ullam. Quo sapiente aut ducimus dolorum odio pariatur ad, minima impedit
+                    obcaecati cumque quae!</p><br>
+                <button class="second" onclick="reservation()">Make A Reservation</button>
+            </div>
+            <div id="box4">
+                <img src="https://img.freepik.com/premium-photo/variety-food-including-pizza-pizza-cheese_865967-37140.jpg?size=626&ext=jpg&ga=GA1.2.301797753.1688363773&semt=ais"
+                    width="380px" height="343px" alt="">
+            </div>
+        </div>
+        <div id="box">
+            <div>
+                <div class="category">
+                    <img src="https://cdn-icons-png.flaticon.com/128/7725/7725038.png" id="cat6" alt="">
+                    <h3 class="one">Food & Drinks</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos dignissimos </p>
+                </div>
+                <div class="category">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3827/3827598.png" id="cat6" alt="">
+                    <h3 class="one">Outdoor Dinning</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos dignissimos </p>
+                </div>
+                <div class="lastcategory">
+                    <img src="https://cdn-icons-png.flaticon.com/128/5273/5273457.png" id="cat6" alt="">
+                    <h3 class="one">Beach View</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos dignissimos </p>
+                </div>
+            </div>
+            <div>
+                <div class="category">
+                    <img src="https://cdn-icons-png.flaticon.com/128/4521/4521028.png" id="cat6" alt="">
+                    <h3 class="one">Decorations</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos dignissimos </p>
+                </div>
+                <div class="category">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2276/2276931.png" id="cat6" alt="">
+                    <h3 class="one">Indoor Dinning</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos dignissimos </p>
+                </div>
+                <div class="lastcategory">
+                    <img src="https://cdn-icons-png.flaticon.com/128/737/737967.png" id="cat6" alt="">
+                    <h3 class="one">Resort Beach</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos dignissimos </p>
+                </div>
+            </div>
+
+        </div>
+        <div id="box">
+            <div class="faq">
+                <h6 style="text-align: center;">FAQs</h6>
+                <ul class="accordion">
+                    <li>
+                        <input type="radio" name="accordion" id="first" checked>
+                        <label for="first"><b>How to cancel?</b></label>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dicta nihil placeat amet
+                                adipisci. Eaque veritatis earum eum a sed odio velit iste quaerat, consequatur, nemo
+                                rerum
+                                expedita excepturi eligendi.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="accordion" id="second">
+                        <label for="second"><b>How to claim couponcodes?</b></label>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dicta nihil placeat amet
+                                adipisci. Eaque veritatis earum eum a sed odio velit iste quaerat, consequatur, nemo
+                                rerum
+                                expedita excepturi eligendi.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="accordion" id="third">
+                        <label for="third"><b>Is there any vacancy?</b></label>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dicta nihil placeat amet
+                                adipisci. Eaque veritatis earum eum a sed odio velit iste quaerat, consequatur, nemo
+                                rerum
+                                expedita excepturi eligendi.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="accordion" id="fourth">
+                        <label for="fourth"><b>what are payment methods?</b></label>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dicta nihil placeat amet
+                                adipisci. Eaque veritatis earum eum a sed odio velit iste quaerat, consequatur, nemo
+                                rerum
+                                expedita excepturi eligendi.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div id="message">
+                    <button class="hi" onclick="send()">Send Us Message</button>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy; copyright@ 2023by ms.web designer|all rights reserved</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script>
+        function reservation() {
+            window.location.href = "index1.html"
+        }
+        function send() {
+            window.location.href = "index2.html"
+        }
+        function contactInfo(){
+            window.location.href = "index3.html"
+        }
+        function checkHotelAvailability() {
+            window.location.href = "index1.html"
+        }
+    </script>
 </body>
+
 </html>

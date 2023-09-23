@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            border: 1px solid blanchedalmond;
+            width: 400px;
+            margin: auto;
+            box-shadow: 6px 5px 7px 1px;
+        }
+
+        #message {
+            width: 420px;
+            height: 450px;
+            float: right;
+            margin-top: 15px;
+        }
+
+        legend {
+            color: burlywood;
+        }
+
+        .hi {
+            color: blanchedalmond;
+            margin-left: 30px;
+            background-color: rgb(92, 64, 51);
+            margin-left: 163px;
+            height: 25px;
+            border: 1px solid;
+        }
+
+        .ji {
+            margin-left: 33px;
+            height: 30px;
+            width: 350px;
+        }
+
+        .back-video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            margin-left: 42px;
+            width: 300px;
+            height: 35px;
+        }
+
+        textarea {
+            margin-left: 42px;
+        }
+
+        button {
+            background-color: salmon;
+            color: aliceblue;
+            width: 180px;
+            height: 35px;
+            border-radius: 10px;
+            margin-left: 110px;
+            margin-bottom: 10px;
+        }
+
+        th {
+            color: aliceblue;
+        }
+
+        td {
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="mixkit-sunset-on-a-beach-seen-from-a-terrace-44500-medium.mp4" type="video/mp4">
+        </video>
+        <div id="first">
+            <form action="">
+                <legend>
+                    <h1>Send Us Message</h1>
+                </legend>
+                <input type="text" placeholder="Name" id="name" onkeyup="validate()"><br><br>
+                <p id="para" style="color: red; display: none;">Please enter a valid name</p>
+                <input type="text" placeholder="Email" id="email" onkeyup="validate()"><br><br>
+                <p id="para1" style="color: red; display: none;">Please enter a valid email</p>
+                <input type="text" placeholder="Mobile No." id="phno" onkeyup="validate()"><br><br>
+                <p id="para2" style="color: red; display: none;">Please enter a valid phone number</p>
+                <textarea cols="39" rows="5" placeholder="Write what do you want ?" id="matter" onkeyup="validate()"></textarea><br><br>
+                <button type="button" id="sendButton" onclick="addusers()" disabled>Send</button>
+            </form>
+        </div>
+    </div>
+    <br>
+    <script>
+        var users = [];
+        function validate() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phno = document.getElementById("phno").value;
+            const matter = document.getElementById("matter").value;
+            
+            const namePattern = /^[a-zA-Z\s]+$/;
+            const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+            const phnoPattern = /^\d{10}$/;
+            const nameIsValid = namePattern.test(name);
+            const emailIsValid = emailPattern.test(email);
+            const phnoIsValid = phnoPattern.test(phno);
+            
+            document.getElementById("para").style.display = nameIsValid ? "none" : "block";
+            document.getElementById("para1").style.display = emailIsValid ? "none" : "block";
+            document.getElementById("para2").style.display = phnoIsValid ? "none" : "block";
+            
+            const sendButton = document.getElementById("sendButton");
+            sendButton.disabled = !(nameIsValid && emailIsValid && phnoIsValid && matter.length > 0);
+        }
+        var users1=JSON.parse(localStorage.getItem("users1"))
+        if(users1== null){
+            users1=[];
+        }
+        function addusers() {
+            var user1 = {
+                name: "",
+                email: "",
+                phno: "",
+                matter: "",
+            }
+            for (a in user1) {
+                user1[a] = document.getElementById(a).value
+            }
+            users1.push(user1)
+            console.log(users1)
+            localStorage.setItem("users",JSON.stringify(users1))
+            window.location.href="index2display.html"
+            displayusers();
+        }
+        function clearform() {
+            var user = {
+                name: "",
+                email: "",
+                phno: "",
+                matter: "",
+            }
+            for (a in user) {
+                document.getElementById(a).value = ""
+            }
+        }   
+    </script>
+</body>
+
+</html>

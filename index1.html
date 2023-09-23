@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 960px;
+            margin: auto;
+            margin-top: -6vh;
+        }
+
+        h1 {
+            margin-top: 54px;
+        }
+
+        #third {
+            border: 3px solid olivedrab;
+            border-style: dashed;
+            width: 438px;
+            float: left;
+            height: 480px;
+            background-color: black;
+            position: relative;
+            top: 0px;
+
+
+        }
+
+        #second {
+            border: 1px solid;
+            width: 420px;
+            float: right;
+            background-color: whitesmoke;
+            box-shadow: 3px 3px 7px 1px;
+            margin-bottom: 10px;
+        }
+
+        h1,
+        p,
+        h2 {
+            color: white;
+            text-align: center;
+        }
+
+        h3 {
+            color: darkolivegreen;
+            text-align: center;
+        }
+
+        label {
+            padding-left: 10px;
+        }
+
+        #add {
+            margin-left: 143px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            border-radius: 33px;
+            height: 34px;
+            width: 144px;
+        }
+
+        header {
+            width: 100%;
+            height: 34vh;
+        }
+
+        ul li:hover {
+            background-color:#142c64
+;
+            color: black;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 130px;
+            background-color: black;
+            z-index: 10;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        ul li {
+            display: inline;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-right: 25px;
+        }
+
+        ul {
+            margin-left: 300px;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Times New Roman', Times, serif;
+            color: yellow;
+            padding-top: 20px;
+        }
+
+        .menu {
+            width: 100%;
+            position: fixed;
+            top: 80px;
+            background-color:  #E50914;
+        }
+
+        .logo {
+            width: 100%;
+            position: fixed;
+            text-align: center;
+        }
+
+        #name,
+        #email,
+        #number,
+        #ocassion {
+            height: 30px;
+            width: 240px;
+            border: 2px solid #ccc;
+            /* Initial border color */
+            padding: 5px;
+            transition: border-color 0.3s ease-in-out;
+            /* Smooth transition for border color change */
+        }
+
+        #date {
+            height: 30px;
+            width: 150px;
+        }
+
+        #time {
+            height: 30px;
+            width: 150px;
+        }
+
+        input {
+            height: 11px;
+            width: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>Restaurants Tables Booking Facility</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a
+                            href="https://www.agoda.com/en-in/search?selectedproperty=463240&city=17269&hid=463240&site_id=1841706&tag=5d61ab35-f483-896d-7122-5012a7295f0e&device=c&network=g&adid=454628322905&rand=1695065421749674389&expid=&adpos=&gclid=Cj0KCQjwz8emBhDrARIsANNJjS72cAKrScUElrtObUnAeSZjZ1j-HuA0gIf05LS1t253tie7glV6cqoaAgS4EALw_wcB&pslc=1">about</a>
+                    </li>
+                    <li><a
+                            href="index1.html">reservation</a>
+                    </li>
+                    <li><a href="index4.html">gallery</a></li>
+                    <li><a href="index3.html">contact</a></li>
+                    <li><a href="index5.html">reviews</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="container">
+        <div id="first">
+            <div id="third">
+                <h1>TIME OPEN</h1>
+                <h3>Monday-friday</h3>
+                <p>7am-11am(breakfast)</p>
+                <p>11am-10pm(Lunch/Dinner)</p>
+                <h3>Saturday and Sunday</h3>
+                <p>9am-10am(breakfast)</p>
+                <p>10am-10pm(Lunch/Dinner)</p>
+                <h1>Call Us :(123)34-50-567</h1>
+            </div>
+        </div>
+        <div id="second">
+            <form id=box action="">
+                <h2 style="color: olive;margin-top: 29px;">RESERVATION ONLINE</h2><br>
+                <label for="">Name*&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp</label>
+                <input type="text" id="name" onkeyup="validate()" placeholder="your name"><br><br>
+                <p id="para" style="color: red; display: none;">Please enter a valid name</p>
+                <label for="">email*&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+                <input type="text" id="email" onkeyup="validate()" placeholder="your email"><br><br>
+                <p id="para1" style="color: red; display: none;">Please enter a valid email</p>
+                <label for="">Phone Number*</label>
+                <input type="number" id="number" onkeyup="validate()" placeholder="your Mobilenumber"><br><br>
+                <p id="para2" style="color: red; display: none;">Please enter a valid phone number</p>
+                <label for="">ocassion&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp</label>
+                <input type="text" id="ocassion" onkeyup="validate()"><br><br>
+                <label for="">date*&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                </label>
+                <input type="date" id="date"><br><br>
+                <label for="time">Time:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp
+                    &nbsp</label>
+                <input type="time" id="time"><br><br>
+                <label for="size">Party size*</label>
+                <input type="radio" name="size" value="5-10">5-10
+                <input type="radio" name="size" value="10-15">10-15
+                <input type="radio" name="size" value="15-20">15-20
+                <input type="radio" name="size" value="20-25">20-25
+                <br><br>
+                <button type="button" onclick="adduser()" id="add">Make A Reservation</button>
+
+            </form>
+        </div>
+        <br><br>
+    </div>
+
+    <script>
+        var users = JSON.parse(localStorage.getItem("users"))
+        if (users == null) {
+            users = [];
+        }
+        var sizebtn = document.getElementsByName("size")
+        function adduser() {
+            var user = {
+                name: "",
+                email: "",
+                number: "",
+                ocassion: "",
+                date: "",
+                time: "",
+                size: "",
+            }
+            for (a in user) {
+                if (a != "size") {
+                    user[a] = document.getElementById(
+                        a).value;
+                }
+                else if (a == "size") {
+                    sizebtn.forEach((sz) => {
+                        if (sz.checked) {
+                            user.size = sz.value;
+                        }
+                    })
+                }
+            }
+            users.push(user)
+            clearform();
+            localStorage.setItem("users", JSON.stringify(users))
+            window.location.href = "index1display.html"
+        }
+        function clearform() {
+            var user = {
+                name: "",
+                email: "",
+                number: "",
+                ocassion: "",
+                date: "",
+                time: "",
+                size: "",
+            }
+            for (a in user) {
+                if (a != "size") {
+                    document.getElementById(a).value = ""
+                    sizebtn.forEach((sz) => {
+                        sz.checked = false
+                    })
+                }
+            }
+        }
+        function validate() {
+            var name = document.getElementById("name");
+            var email = document.getElementById("email");
+            var number = document.getElementById("number");
+            var ocassion = document.getElementById("ocassion");
+
+            var namePattern = /^[a-zA-Z\s]+$/;
+            var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+            var numberPattern = /^\d{10}$/;
+
+            var nameIsValid = namePattern.test(name.value);
+            var emailIsValid = emailPattern.test(email.value);
+            var phnoIsValid = numberPattern.test(number.value);
+
+            setBorderColor(name, nameIsValid);
+            setBorderColor(email, emailIsValid);
+            setBorderColor(number, phnoIsValid);
+            setBorderColor(ocassion, ocassion.value.length > 0);
+            document.getElementById("para").style.display = nameIsValid ? "none" : "block";
+            document.getElementById("para1").style.display = emailIsValid ? "none" : "block";
+            document.getElementById("para2").style.display = phnoIsValid ? "none" : "block";
+
+            var sendButton = document.getElementById("add");
+            sendButton.disabled = !(nameIsValid && emailIsValid && phnoIsValid && ocassion.value.length > 0);
+        }
+
+        function setBorderColor(element, isValid) {
+            if (isValid) {
+                element.style.borderColor = "green";
+            } else {
+                element.style.borderColor = "red";
+
+            }
+        }
+
+    </script>
+    <script>
+        var hotels = [
+            { name: "Prabha", available: true },
+            { name: "Sindhu", available: false },
+            { name: "Clickchicken", available: true },
+            { name: "lazeez", available: true },
+            { name: "salt&pepper", available: false },
+            { name: "AndhraSpice", available: true },
+            { name: "Vishnubhavan", available: true },
+            { name: "maurya", available: false },           
+        ];
+        function checkHotelAvailability(hotelName) {
+            var hotel = hotels.find(h => h.name === hotelName);
+            if (hotel) {
+                return hotel.available ? "Available" : "Not Available";
+            } else {
+                return "Hotel not found";
+            }
+        }
+        var hotelNameToCheck = prompt("Enter the hotel name");
+        var availabilityStatus = checkHotelAvailability(hotelNameToCheck);
+        alert("Hotel " + hotelNameToCheck + " is " + availabilityStatus);
+    </script>
+</body>
+
+</html>
